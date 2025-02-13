@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">Res</string>
+    <string name="app_name">Restaurant</string>
     <string name="title_activity_sedes">SedesActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
     <string name="buttonSedes">Conoce Nuestras Locaciones</string>
     <string name="buttonMenu">Oferta Gastronomica</string>
+    <string name="buttonReserva">Reserva</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

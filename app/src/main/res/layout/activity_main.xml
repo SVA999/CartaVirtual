@@ -17,24 +17,28 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
 
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="150dp"
-                android:layout_marginTop="70dp"
-                android:layout_marginEnd="150dp"
-                android:layout_marginBottom="215dp"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@mipmap/cuchilleria" />
 
             <Button
                 android:id="@+id/buttonMenu1"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="VerMenu"
+                android:text="@string/buttonMenu"
                 android:textColor="@color/white"
                 android:textColorLink="@color/orangePrincipal"
                 tools:text="@string/buttonMenu" />
@@ -46,10 +50,28 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="VerSedes"
+                android:text="@string/buttonSedes"
                 android:textColor="@color/white"
                 android:textColorLink="@color/orangePrincipal"
                 app:rippleColor="@color/orangePrincipal"
                 tools:text="@string/buttonSedes" />
+
+            <Button
+                android:id="@+id/buttonVerSedes"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="Reservar"
+                android:text="@string/buttonReserva"
+                android:textColor="@color/white"
+                android:textColorLink="@color/orangePrincipal"
+                app:rippleColor="@color/orangePrincipal"
+                tools:text="@string/buttonReserva" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="57dp" />
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

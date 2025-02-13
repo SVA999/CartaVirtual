@@ -8,22 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".SedesActivity"/>
 
-    ///
-    <Button
-    android:id="@+id/btnZoomIn"
-    android:text="Zoom In"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentEnd="true" />
-
-    <Button
-    android:id="@+id/btnZoomOut"
-    android:text="Zoom Out"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:layout_toStartOf="@id/btnZoomIn" />
 
 
 
