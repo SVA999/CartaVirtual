@@ -1,6 +1,8 @@
 package com.upb.cartavirtual01;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +23,13 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    public void VerSedes (View v){
+        Intent i = new Intent(this,SedesActivity.class);
+        startActivity(i);
+
+    }
+
+
+
 }
