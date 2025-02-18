@@ -8,19 +8,28 @@
     tools:context=".MenuActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="69dp" />
+            android:layout_height="34dp" />
 
         <ListView
             android:id="@id/android:list"
-            android:layout_width="match_parent"
-            android:layout_height="586dp">
+            android:layout_width="wrap_content"
+            android:layout_height="653dp">
 
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pf1" />
         </ListView>
 
         <Space

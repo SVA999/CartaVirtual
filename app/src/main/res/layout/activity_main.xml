@@ -12,8 +12,8 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="410dp"
-            android:layout_height="736dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,8 +28,9 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="match_parent"
+                android:layout_width="410dp"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/buttonMenu"
                 app:srcCompat="@mipmap/cuchilleria" />
 
             <Button
@@ -41,6 +42,7 @@
                 android:text="@string/buttonMenu"
                 android:textColor="@color/white"
                 android:textColorLink="@color/orangePrincipal"
+                android:textSize="20sp"
                 tools:text="@string/buttonMenu" />
 
             <Button
@@ -53,6 +55,7 @@
                 android:text="@string/buttonSedes"
                 android:textColor="@color/white"
                 android:textColorLink="@color/orangePrincipal"
+                android:textSize="20sp"
                 app:rippleColor="@color/orangePrincipal"
                 tools:text="@string/buttonSedes" />
 
@@ -66,6 +69,7 @@
                 android:text="@string/buttonReserva"
                 android:textColor="@color/white"
                 android:textColorLink="@color/orangePrincipal"
+                android:textSize="20sp"
                 app:rippleColor="@color/orangePrincipal"
                 tools:text="@string/buttonReserva" />
 

@@ -2,9 +2,25 @@
     <string name="app_name">Restaurant</string>
     <string name="title_activity_sedes">SedesActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
+
     <string name="buttonSedes">Conoce Nuestras Locaciones</string>
     <string name="buttonMenu">Oferta Gastronomica</string>
     <string name="buttonReserva">Reserva</string>
+
+    <string name="imgMenu">Imagen_Plato</string>
+
+    <string name="catPlatosFuertes">Platos Fuertes</string>
+    <string name="descPlatosFuertes">Aqui encontraras nuestros Platos Fuertes</string>
+    <string name="catEntrada">Entradas</string>
+    <string name="descEntrada">Aqui encontraras nuestras Entrada</string>
+    <string name="catBebidas">Bebidas</string>
+    <string name="descBebidas">Aqui encontraras nuestras Bebidas</string>
+    <string name="catPostres">Postres</string>
+    <string name="descPostres">Aqui encontraras nuestros Postres</string>
+
+
+
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
