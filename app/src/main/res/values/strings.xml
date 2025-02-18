@@ -9,6 +9,15 @@
 
     <string name="imgMenu">Imagen_Plato</string>
 
+
+    <string-array name="categorias">
+        <item>Platos Fuertes</item>
+        <item>Entradas</item>
+        <item>Bebidas</item>
+        <item>Postres</item>
+    </string-array>
+
+
     <string name="catPlatosFuertes">Platos Fuertes</string>
     <string name="descPlatosFuertes">Aqui encontraras nuestros Platos Fuertes</string>
     <string name="catEntrada">Entradas</string>
@@ -18,7 +27,33 @@
     <string name="catPostres">Postres</string>
     <string name="descPostres">Aqui encontraras nuestros Postres</string>
 
+    <string-array name="platosFuertes">
+        <item>Filete mignon con puré de papas</item>
+        <item>Paella de mariscos</item>
+        <item>Pasta Alfredo con pollo</item>
+        <item>Pechuga de pollo rellena</item>
+    </string-array>
 
+    <string-array name="entradas">
+        <item>Ensalada Caprese</item>
+        <item>Bruschetta</item>
+        <item>Ceviche de camarones</item>
+        <item>Hummus con pan pita</item>
+    </string-array>
+
+    <string-array name="bebidas">
+        <item>Té helado</item>
+        <item>Agua de coco</item>
+        <item>Smoothie de frutas</item>
+        <item>Vino tinto</item>
+    </string-array>
+
+    <string-array name="postres">
+        <item>Tiramisú</item>
+        <item>Cheesecake</item>
+        <item>Brownie</item>
+        <item>Flan de vainilla</item>
+    </string-array>
 
 
     <string name="large_text">

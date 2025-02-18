@@ -2,10 +2,12 @@ package com.upb.cartavirtual01;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -22,37 +24,11 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     //Declaramos variables
 
-    static String [] Categorias = new String [] {"Entrada", "Platos Fuertes", "Bebidas", "Postres"};
-
-
-    public class menuBase  {
-
-        public String titulo;
-        public Integer image;
-        public String descripcion;
-
-    }
-
-    public class Categoria extends menuBase{
-        public ArrayList<menuBase> l_platos;
-        public Categoria(String titulo, Integer image) {
-            this.titulo = titulo;
-            this.image = image;
-            this.l_platos = new ArrayList<>();
-        }
-    }
-
-    public class Plato extends menuBase{
-
-        public double precio;
-
-    }
-
-    private static ArrayList<Categoria> l_categorias = new ArrayList<>();
+    static String [] Categorias = new String [] {"Platos Fuertes","Entrada", "Bebidas", "Postres"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,86 +41,36 @@ public class MenuActivity extends AppCompatActivity {
             return insets;
         });
 
-        setData();
-
         ListView lv =findViewById(android.R.id.list);
 
-        ListAdapter la = new ArrayAdapter <String>(this, android.R.layout.simple_list_item_1 );
+        ListAdapter la = new ArrayAdapter <String>(this, android.R.layout.simple_list_item_1,Categorias );
 
         lv.setAdapter(la);
 
-    }
-
-    public void setData( ) {
-
-        l_categorias.clear();
-
-        Categoria platosFuerte = new Categoria(getResources().getString(R.string.catPlatosFuertes), R.drawable.pf1);
-        l_categorias.add(platosFuerte);
-
-        Categoria entradas = new Categoria(getResources().getString(R.string.catPlatosFuertes), R.drawable.ent01);
-        l_categorias.add(entradas);
-
-        Categoria bebidas = new Categoria(getResources().getString(R.string.catPlatosFuertes), R.drawable.beb01);
-        l_categorias.add(bebidas);
-
-        Categoria postres = new Categoria(getResources().getString(R.string.catPlatosFuertes), R.drawable.pos01);
-        l_categorias.add(postres);
-
+        lv.setOnItemClickListener(this);
 
     }
 
-    public static class MyAdapter01 extends BaseAdapter{
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
 
-        private Context mContext;
-        public MyAdapter01(Context c){
-            mContext = c;
-        }
-
-
-        @Override
-        public int getCount() {
-            return l_categorias.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return l_categorias.get(position);
-        }
-
-        @Override
-        public long getItemId(int i) {
-            return 0;
-        }
-
-        @SuppressLint("UseCompatLoadingForDrawables")
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-
-            View view = null;
-
-            if (convertView == null) {
-            // Make up a new view
-                LayoutInflater inflater = (LayoutInflater) mContext
-                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                view = inflater.inflate(R.layout.menu_cat_layout, null);
-            } else {
-            // Use convertView if it is available
-                view = convertView;
-            }
-
-            // Example to get an image resource
-            ImageView img = (ImageView) view.findViewById(R.id.image);
-            img.setImageDrawable(mContext.getResources().getDrawable(l_categorias.get(position).image));
-            TextView tTitle = (TextView) view.findViewById(R.id.title);
-            tTitle.setText(l_categorias.get(position).titulo);
-
-            TextView Tdescription = (TextView) view.findViewById(R.id.description);
-            Tdescription.setText(l_categorias.get(position).descripcion);
-
-            return view;
-
+        switch (i){
+            case 0:
+                Intent intencion0 = new Intent(this, PlatosfuertesActivity.class);
+                startActivity(intencion0);
+                break;
+            case 1:
+                Intent intencion1 = new Intent(this, EntradasActivity.class);
+                startActivity(intencion1);
+                break;
+            case 2:
+                Intent intencion2 = new Intent(this, BebidasActivity.class);
+                startActivity(intencion2);
+                break;
+            case 3:
+                Intent intencion3 = new Intent(this, PostresActivity.class);
+                startActivity(intencion3);
+                break;
         }
     }
-
 }
