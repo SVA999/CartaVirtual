@@ -19,26 +19,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.upb.cartavirtual01.Clases.Plato;
+
 import java.util.ArrayList;
 
 public class PlatosfuertesActivity extends AppCompatActivity {
+    //AppCompatActivity
 
-    public class Plato  {
-
-        public String titulo;
-        public Integer image;
-        public String descripcion="";
-
-        public Plato(String titulo, Integer image) {
-            this.titulo = titulo;
-            this.image = image;
-        }
-    }
-
+    private MyAdapterPF myAdapter = null;
     private static ArrayList<Plato> l_categorias = new ArrayList<>();
-    static ArrayList<String> lString_categorias = new ArrayList<>();
-    //static String [] Categorias = new String [] {"Platos Fuertes","Entrada", "Bebidas", "Postres"};
-
+    //Strings
+    //String[] platosFuertes = getResources().getStringArray(R.array.platosFuertes);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,59 +42,62 @@ public class PlatosfuertesActivity extends AppCompatActivity {
             return insets;
         });
 
-        //setData();
-
+/*
         ListView lv =findViewById(android.R.id.list);
-
-        ListAdapter la = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lString_categorias);
-
+        ListAdapter la = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,platosFuertes);
         lv.setAdapter(la);
 
-        //lv.setOnItemClickListener(this);
+ */
+
+
+        setData();
+
+        myAdapter = new MyAdapterPF(this);
+        ListView listView = findViewById(R.id.list);
+        listView.setAdapter(myAdapter);
 
     }
 
     public void setData( ) {
 
         l_categorias.clear();
+        Plato platosFuerte01 = new Plato(
+                getResources().getStringArray(R.array.platosFuertes)[0],
+                getResources().getStringArray(R.array.platosFuertes)[1],
+                R.drawable.pf01
+        );
+        l_categorias.add(platosFuerte01);
 
-        Plato platosFuerte = new Plato(getResources().getString(R.string.catPlatosFuertes), R.drawable.pf1);
-        l_categorias.add(platosFuerte);
-        lString_categorias.add(l_categorias.get(0).titulo);
-
-        Plato entradas = new Plato(getResources().getString(R.string.catPlatosFuertes), R.drawable.pf1);
-        l_categorias.add(entradas);
-        lString_categorias.add(l_categorias.get(1).titulo);
-
-        Plato bebidas = new Plato(getResources().getString(R.string.catPlatosFuertes), R.drawable.pf2);
-        l_categorias.add(bebidas);
-        lString_categorias.add(l_categorias.get(2).titulo);
-
-        Plato postres = new Plato(getResources().getString(R.string.catPlatosFuertes), R.drawable.pf2);
-        l_categorias.add(postres);
-        lString_categorias.add(l_categorias.get(3).titulo);
+        Plato platosFuerte02 = new Plato(
+                getResources().getStringArray(R.array.platosFuertes)[2],
+                getResources().getStringArray(R.array.platosFuertes)[3],
+                R.drawable.pf02
+        );
+        l_categorias.add(platosFuerte02);
     }
 
-    public static class MyAdapter01 extends BaseAdapter {
+    public static class MyAdapterPF extends BaseAdapter {
 
         private Context mContext;
-
-        public MyAdapter01(Context c) {
+        public MyAdapterPF(Context c) {
             mContext = c;
         }
 
         @Override
         public int getCount() {
+
             return l_categorias.size();
         }
 
         @Override
         public Object getItem(int position) {
+
             return l_categorias.get(position);
         }
 
         @Override
         public long getItemId(int i) {
+
             return 0;
         }
 

@@ -12,47 +12,42 @@
 
     <string-array name="categorias">
         <item>Platos Fuertes</item>
+        <item>Deliciosos platillos de alta cocina</item>
         <item>Entradas</item>
+        <item>Para que disfrutes mientras</item>
         <item>Bebidas</item>
+        <item>Las mas deliciosas</item>
         <item>Postres</item>
+        <item>Deleita tu paladar</item>
     </string-array>
-
-
-    <string name="catPlatosFuertes">Platos Fuertes</string>
-    <string name="descPlatosFuertes">Aqui encontraras nuestros Platos Fuertes</string>
-    <string name="catEntrada">Entradas</string>
-    <string name="descEntrada">Aqui encontraras nuestras Entrada</string>
-    <string name="catBebidas">Bebidas</string>
-    <string name="descBebidas">Aqui encontraras nuestras Bebidas</string>
-    <string name="catPostres">Postres</string>
-    <string name="descPostres">Aqui encontraras nuestros Postres</string>
 
     <string-array name="platosFuertes">
-        <item>Filete mignon con puré de papas</item>
-        <item>Paella de mariscos</item>
-        <item>Pasta Alfredo con pollo</item>
-        <item>Pechuga de pollo rellena</item>
+        <item>Salmón Wellington - $38,000</item>
+        <item>Un filete de salmón fresco, envuelto en hojaldre dorado y crujiente, acompañado de espárragos tiernos y una suave salsa holandesa.</item>
+        <item>Filete Mignon - $38,000</item>
+        <item>Un filete de res de primera calidad, cocinado a la perfección, bañado en una rica reducción de vino tinto y servido con un puré de papas cremoso y aromático con trufa.</item>
     </string-array>
 
+
     <string-array name="entradas">
-        <item>Ensalada Caprese</item>
-        <item>Bruschetta</item>
-        <item>Ceviche de camarones</item>
-        <item>Hummus con pan pita</item>
+        <item>Carpaccio de res - $12,000</item>
+        <item>Finas láminas de res cruda, aderezadas con rúcula fresca, virutas de parmesano y una vinagreta de trufa aromática</item>
+        <item>Crema de langosta - $12,000</item>
+        <item>Una crema suave y aterciopelada, con trozos de langosta y un toque de brandy, servida con crostini crujientes de hierbas</item>
     </string-array>
 
     <string-array name="bebidas">
-        <item>Té helado</item>
-        <item>Agua de coco</item>
-        <item>Smoothie de frutas</item>
-        <item>Vino tinto</item>
+        <item>Cóctel "Pergamino Royale" - $10,000</item>
+        <item>Un cóctel elegante y refrescante, con champán, licor de flor de saúco y frambuesas frescas.</item>
+        <item>Vino tinto - $13,000</item>
+        <item>Un vino tinto de alta gama, con notas de frutas maduras y especias, perfecto para acompañar los platos fuertes</item>
     </string-array>
 
     <string-array name="postres">
-        <item>Tiramisú</item>
-        <item>Cheesecake</item>
-        <item>Brownie</item>
-        <item>Flan de vainilla</item>
+        <item>Crème brûlée - $14,000</item>
+        <item>Una crema suave y aterciopelada, con una capa crujiente de azúcar caramelizado y frutos rojos frescos para un contraste de texturas y sabores</item>
+        <item>Soufflé de Grand Marnier - $14,000</item>
+        <item>Un postre ligero y esponjoso, con el aroma distintivo del Grand Marnier y una salsa de naranja cítrica que realza su sabor</item>
     </string-array>
 
 
