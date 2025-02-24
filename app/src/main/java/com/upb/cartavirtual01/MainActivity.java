@@ -38,13 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void VerMenuDefault (View v){
-        Intent i = new Intent(this, MenuActivityDefault.class);
-        startActivity(i);
-
-    }
-
-
     public void Reservar (View v){
         //Intent i = new Intent(this,MenuActivity.class);
         //startActivity(i);

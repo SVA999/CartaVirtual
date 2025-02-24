@@ -14,6 +14,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:gravity="center_horizontal|center_vertical"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,54 +29,64 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="410dp"
-                android:layout_height="wrap_content"
+                android:layout_width="250dip"
+                android:layout_height="250dip"
+                android:layout_marginBottom="20dip"
                 android:contentDescription="@string/buttonMenu"
+                android:paddingStart="10dip"
+                android:paddingTop="10dip"
+                android:paddingRight="10dip"
+                android:paddingBottom="10dip"
+                android:scaleType="fitCenter"
                 app:srcCompat="@mipmap/cuchilleria" />
 
-            <Button
-                android:id="@+id/buttonMenu1"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="VerMenu"
-                android:text="@string/buttonMenu"
-                android:textColor="@color/white"
-                android:textColorLink="@color/orangePrincipal"
-                android:textSize="20sp"
-                tools:text="@string/buttonMenu" />
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical"
+                android:paddingBottom="50dip">
 
-            <Button
-                android:id="@+id/buttonVerSedes2"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="VerSedes"
-                android:text="@string/buttonSedes"
-                android:textColor="@color/white"
-                android:textColorLink="@color/orangePrincipal"
-                android:textSize="20sp"
-                app:rippleColor="@color/orangePrincipal"
-                tools:text="@string/buttonSedes" />
+                <Button
+                    android:id="@+id/buttonMenu1"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="350dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="VerMenu"
+                    android:text="@string/buttonMenu"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/orangePrincipal"
+                    android:textSize="20sp"
+                    tools:text="@string/buttonMenu" />
 
-            <Button
-                android:id="@+id/buttonVerSedes"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="Reservar"
-                android:text="@string/buttonReserva"
-                android:textColor="@color/white"
-                android:textColorLink="@color/orangePrincipal"
-                android:textSize="20sp"
-                app:rippleColor="@color/orangePrincipal"
-                tools:text="@string/buttonReserva" />
+                <Button
+                    android:id="@+id/buttonVerSedes2"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="350dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="VerSedes"
+                    android:text="@string/buttonSedes"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/orangePrincipal"
+                    android:textSize="20sp"
+                    tools:text="@string/buttonSedes" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="57dp" />
+                <Button
+                    android:id="@+id/buttonVerSedes"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="350dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="Reservar"
+                    android:text="@string/buttonReserva"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/orangePrincipal"
+                    android:textSize="20sp"
+                    tools:text="@string/buttonReserva" />
+
+            </LinearLayout>
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
