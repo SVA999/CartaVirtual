@@ -1,3 +1,5 @@
+package layout
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
@@ -37,6 +39,12 @@ android {
 
 dependencies {
 
+    implementation (libs.glide)
+    annotationProcessor (libs.glide.compiler)
+    implementation (libs.core.ktx)
+    implementation (libs.play.services.maps.v1802 )
+    implementation (libs.coordinatorlayout)
+    implementation (libs.drawerlayout)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -46,4 +54,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
 }

@@ -2,9 +2,13 @@ package com.upb.cartavirtual01;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.upb.cartavirtual01.Clases.*;
+
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.*;
+import android.widget.*;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -13,8 +17,13 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.upb.cartavirtual01.databinding.ActivitySedesBinding;
+
+import java.util.ArrayList;
+
 
 public class SedesActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -32,6 +41,7 @@ public class SedesActivity extends FragmentActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
     /**
@@ -47,18 +57,11 @@ public class SedesActivity extends FragmentActivity implements OnMapReadyCallbac
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-
-
-        BitmapDescriptor icono = BitmapDescriptorFactory.fromBitmap(Bitmap.createScaledBitmap(
-                BitmapFactory.decodeResource(getResources(), R.drawable.laureles01), 100, 100, true));
-
-
         LatLng sedeLaureles = new LatLng(6.2413659,-75.5946323);
         mMap.addMarker(new MarkerOptions()
             .position(sedeLaureles)
             .title("Laureles")
             .snippet("Dirección: Cq 73 #34 - 65, Laureles - Estadio, Medellín, Laureles, Medellín, Antioquia")
-            .icon(icono)
             .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
         );
 
@@ -69,7 +72,6 @@ public class SedesActivity extends FragmentActivity implements OnMapReadyCallbac
                 .position(sedeCiudadDelRio)
                 .title("Ciudad del Rios")
                 .snippet("Dirección: Cl. 20 #43g-158, El Poblado, Medellín, El Poblado, Medellín, Antioquia")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ciudad_del_rio))
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
         );
 
