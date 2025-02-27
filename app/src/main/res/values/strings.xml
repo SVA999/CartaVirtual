@@ -6,6 +6,11 @@
     <string name="buttonSedes">Conoce Nuestras Locaciones</string>
     <string name="buttonMenu">Oferta Gastronomica</string>
     <string name="buttonReserva">Reserva</string>
+    <string name="Menu">Menu</string>
+    <string name="Platos">Platos Fuertes</string>
+    <string name="Entradas">Entradas</string>
+    <string name="Bebidas">Bebidas</string>
+    <string name="Postres">Postres</string>
 
     <string name="imgMenu">Imagen_Plato</string>
 
@@ -140,7 +145,6 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_maps">MapsActivity</string>
 
 
 </resources>

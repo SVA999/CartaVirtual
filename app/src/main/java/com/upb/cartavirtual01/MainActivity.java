@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         //startActivity(i);
 
         String numeroTelefono = "+573225886403";
-        String mensajePredeterminado = "Hola, muchas gracias por comunicarse con nosotros en unos segundo te atendemos";
+        String mensajePredeterminado = "Hola, Quiero reservar una mesa";
 
         Uri uri = Uri.parse("whatsapp://send?phone=" + numeroTelefono + "&text=" + Uri.encode(mensajePredeterminado));
 
